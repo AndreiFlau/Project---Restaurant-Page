@@ -1,0 +1,12 @@
+html {
+    background: no-repeat url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+div#content {}
+
+#home {
+    color: blue;
+}
