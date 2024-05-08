@@ -1,6 +1,8 @@
 import './styles.css';
 import home from "./home.js";
 import footer from "./footer.js";
+import menu from "./menu.js";
+import about from './about.js';
 
 const divContent = document.querySelector("div#content");
 const homeBtn = document.querySelector("#home");
@@ -17,6 +19,8 @@ function changeTabs(btn, page) {
 }
 
 changeTabs(homeBtn, home);
+changeTabs(menuBtn, menu);
+changeTabs(aboutBtn, about);
 divContent.appendChild(home());
 document.body.appendChild(footer());
 console.log("a");
