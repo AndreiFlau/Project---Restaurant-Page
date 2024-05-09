@@ -2,14 +2,29 @@ import coconut from "./coconut.svg";
 
 export default function home() {
     const div = document.createElement("div");
+    const cocoDiv = document.createElement("div");
+    cocoDiv.classList.add("coconut");
+
+    const divH1 = document.createElement("div");
+    divH1.classList.add("kiosk");
+
     const h1 = document.createElement("h1");
     const h1P = document.createElement("p");
     h1.appendChild(h1P);
+
     const h2 = document.createElement("h2");
     const ul = document.createElement("ul");
+    const divUl = document.createElement("div");
+    divUl.classList.add("hours");
+    divUl.appendChild(h2);
+    divUl.appendChild(ul);
+
     const h2At = document.createElement("h2");
     const h2AtP = document.createElement("p");
-    h2At.appendChild(h2AtP);
+    const divAt = document.createElement("div");
+    divAt.classList.add("at");
+    divAt.appendChild(h2At);
+    divAt.appendChild(h2AtP);
 
     // Add the image to our existing div.
     const myCoconut = new Image();
@@ -40,13 +55,15 @@ export default function home() {
     h2At.textContent = "At";
     h2AtP.textContent = "Fictional Beach - Somewhere in the world";
 
-    div.appendChild(myCoconut);
-    div.appendChild(h1);
-    div.appendChild(h1P);
-    div.appendChild(h2);
-    div.appendChild(ul);
-    div.appendChild(h2At);
-    div.appendChild(h2AtP);
+    cocoDiv.appendChild(myCoconut);
+    cocoDiv.appendChild(h1);
+
+    divH1.appendChild(cocoDiv);
+    divH1.appendChild(h1P);
+
+    div.appendChild(divH1);
+    div.appendChild(divUl);
+    div.appendChild(divAt);
 
     return div;
 }

@@ -1,5 +1,4 @@
 export default function footer() {
-    const div = document.createElement("div");
     const footer = document.createElement("footer");
     const p1 = document.createElement("p");
     const a1 = document.createElement("a");
@@ -9,7 +8,7 @@ export default function footer() {
     p1.appendChild(a1);
     const p2a2 = document.createElement("p");
     const p2a2Content = `
-    Photo by <a
+     Photo by <a
         href="https://unsplash.com/@kenrickmills?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kenrick
         Mills</a> on <a
         href="https://unsplash.com/photos/green-coconut-trees-qPsAJhHVbvM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>`;
@@ -18,9 +17,8 @@ export default function footer() {
 
     footer.appendChild(p1);
     footer.appendChild(p2a2);
-    div.appendChild(footer);
 
-    return div;
+    return footer;
 }
 
 {/* <footer>
